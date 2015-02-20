@@ -1,0 +1,1 @@
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\bin\Debug\SlagalicaSolver.exe.config
