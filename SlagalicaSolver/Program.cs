@@ -19,6 +19,11 @@ namespace SlagalicaSolver
                 {
                     Slagalica slagalica = new Slagalica(args[1]);
                     string[] results = slagalica.Solve();
+
+                    foreach (String result in results)
+                    {
+                        Console.WriteLine(string.Format("> {0}", result));
+                    }
                 }
                 else if (args[1] == "mojbroj")
                 {
@@ -30,6 +35,8 @@ namespace SlagalicaSolver
                 // print manpage.
                 PrintManPage();
             }
+
+            Console.Read();
         }
 
         static void PrintManPage()
@@ -38,7 +45,7 @@ namespace SlagalicaSolver
 
             string manualContents = System.IO.File.ReadAllText(executableDirectory + @"\readme.txt");
             Console.Write(manualContents);
-            Console.ReadLine();
+            //Console.ReadLine();
         }
     }
 }
