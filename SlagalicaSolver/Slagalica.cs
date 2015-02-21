@@ -40,7 +40,13 @@ namespace SlagalicaSolver
 
                         foreach(char character in input)
                         {
-                            lowercase = lowercase.Replace(character.ToString(), "");
+                            //lowercase = lowercase.Replace(character.ToString(), "");
+
+                            if (lowercase.Contains(character))
+                            {
+                                int index = lowercase.IndexOf(character);
+                                lowercase = lowercase.Remove(index, 1);
+                            }
                         }
 
                         Console.Write("Leftover: [{0}]", lowercase);
