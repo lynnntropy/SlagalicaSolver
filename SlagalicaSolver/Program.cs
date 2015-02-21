@@ -18,11 +18,19 @@ namespace SlagalicaSolver
                 if (args[0] == "slagalica")
                 {
                     Slagalica slagalica = new Slagalica(args[1]);
-                    string[] results = slagalica.Solve();
+                    List<String> results = slagalica.Solve();
 
-                    foreach (String result in results)
+                    if (results != null && results.Count > 0)
                     {
-                        Console.WriteLine(string.Format("> {0}", result));
+                        Console.WriteLine("\nMatches found (up to 10):");
+                        foreach (String result in results)
+                        {
+                            Console.WriteLine(string.Format(" {0}", result));
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("No matches found.");
                     }
                 }
                 else if (args[1] == "mojbroj")
