@@ -44,11 +44,16 @@ namespace SlagalicaSolver
 
         static void PrintManPage()
         {
-            string executableDirectory = (new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location)).Directory.ToString();
+            //string executableDirectory = (new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location)).Directory.ToString();
 
-            string manualContents = System.IO.File.ReadAllText(executableDirectory + @"\readme.txt");
-            Console.Write(manualContents);
+            //string manualContents = System.IO.File.ReadAllText(executableDirectory + @"\readme.txt");
+            //Console.Write(manualContents);
             //Console.ReadLine();
+
+            Console.WriteLine("\nError: No input.");
+
+            Console.WriteLine("Pass the word jumble as the first argument.");
+            Console.WriteLine("Upišite izmešana slova kao prvi parametar.\n");
         }
     }
 }
