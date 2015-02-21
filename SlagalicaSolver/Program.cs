@@ -1,4 +1,6 @@
-﻿using System;
+﻿#define DEBUG_LOGGING
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -15,27 +17,20 @@ namespace SlagalicaSolver
             {
                 // Arguments passed.
 
-                if (args[0] == "slagalica")
-                {
-                    Slagalica slagalica = new Slagalica(args[1]);
-                    List<String> results = slagalica.Solve();
+                Slagalica slagalica = new Slagalica(args[0]);
+                List<String> results = slagalica.Solve();
 
-                    if (results != null && results.Count > 0)
-                    {
-                        Console.WriteLine("\nMatches found (up to 10):");
-                        foreach (String result in results)
-                        {
-                            Console.WriteLine(string.Format(" {0}", result));
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("No matches found.");
-                    }
+                if (results != null && results.Count > 0)
+                {
+                    //Console.WriteLine("\nMatches found (up to 10):");
+                    //foreach (String result in results)
+                    //{
+                    //    Console.WriteLine(string.Format(" {0}", result));
+                    //}
                 }
-                else if (args[1] == "mojbroj")
+                else
                 {
-
+                    Console.WriteLine("No matches found.");
                 }
             }
             else

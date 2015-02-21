@@ -1,0 +1,28 @@
+This dictionary contain a collection of serbian word. This dictionary 
+is made in WinEdt spell chacker. The source of the list is a three 
+books which is publishing in Serbia. I am type this books, in Latex, 
+for my own personal reson. Publisher is publisher hause name by PLATO, 
+translaters from russian to serbian is Natalija Nenezic. The following 
+books is:   
+
+1. Ruska Lepotica (Russian Beauty), writen by Viktor Jerofejev
+2. Capajev i Praznina, writen by Viktor Peljevin
+3. Empire V, writen by Viktor Peljevin
+
+Now this dictionary contains over a 155.000 serbian words in three 
+dialect (ekavica, ijakavica and jekavica). Because of that this 
+dictionary may be usefull in the following country:
+
+Serbia
+Bosnia and Hercegovina
+Montenegro 
+Croatia
+
+I hope that dictionary is a usefull for a god TeXnic people. 
+
+My name is: Zoran T. Filipoviæ 
+email: zoran dot filipovic at yahoo dot com
+address: Jurija Gagarina 263/3
+city: 11070 Novi Beograd
+state: Srbija (Serbia)
+ 
