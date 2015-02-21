@@ -19,16 +19,8 @@ namespace SlagalicaSolver
 
                 Slagalica slagalica = new Slagalica(args[0]);
                 List<String> results = slagalica.Solve();
-
-                if (results != null && results.Count > 0)
-                {
-                    //Console.WriteLine("\nMatches found (up to 10):");
-                    //foreach (String result in results)
-                    //{
-                    //    Console.WriteLine(string.Format(" {0}", result));
-                    //}
-                }
-                else
+                
+                if (results == null || results.Count == 0)
                 {
                     Console.WriteLine("No matches found.");
                 }
@@ -44,13 +36,7 @@ namespace SlagalicaSolver
 
         static void PrintManPage()
         {
-            //string executableDirectory = (new FileInfo(System.Reflection.Assembly.GetEntryAssembly().Location)).Directory.ToString();
-
-            //string manualContents = System.IO.File.ReadAllText(executableDirectory + @"\readme.txt");
-            //Console.Write(manualContents);
-            //Console.ReadLine();
-
-            Console.WriteLine("\nError: No input.");
+            Console.WriteLine("\nError: No input.\n");
 
             Console.WriteLine("Pass the word jumble as the first argument.");
             Console.WriteLine("Upišite izmešana slova kao prvi parametar.\n");
