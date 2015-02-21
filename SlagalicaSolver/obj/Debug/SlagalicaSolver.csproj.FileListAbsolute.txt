@@ -1,1 +1,6 @@
 c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\bin\Debug\SlagalicaSolver.exe.config
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\bin\Debug\SlagalicaSolver.exe
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\bin\Debug\SlagalicaSolver.pdb
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\obj\Debug\SlagalicaSolver.csprojResolveAssemblyReference.cache
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\obj\Debug\SlagalicaSolver.exe
+c:\users\veselin\Development\CSharp\SlagalicaSolver\SlagalicaSolver\obj\Debug\SlagalicaSolver.pdb
