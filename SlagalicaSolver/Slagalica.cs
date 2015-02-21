@@ -10,9 +10,7 @@ namespace SlagalicaSolver
     class Slagalica
     {
         string input;
-
         string[] wordlist;
-
 
         public Slagalica(string input)
         {
@@ -21,12 +19,12 @@ namespace SlagalicaSolver
 
         public List<String> Solve()
         {
-            Console.WriteLine();
-
             List<String> output = new List<string>();            
             
             LoadWordlist();
             SortWordlistByLength();
+
+            Console.Write("\n");
 
             foreach (String word in wordlist)
             {
@@ -36,7 +34,9 @@ namespace SlagalicaSolver
                     {
                         string lowercase = word.ToLower();
 
+#if DEBUG_LOGGING
                         Console.Write("Trying word {0}... ", lowercase);
+#endif
 
                         foreach(char character in input)
                         {
@@ -48,21 +48,27 @@ namespace SlagalicaSolver
                                 lowercase = lowercase.Remove(index, 1);
                             }
                         }
-
+#if DEBUG_LOGGING
                         Console.Write("Leftover: [{0}]", lowercase);
+#endif
 
                         if (lowercase.Length == 0)
                         {
+#if DEBUG_LOGGING
                             Console.Write(" (match!)");
+#endif
                             // Word is a match!
                             output.Add(word.ToLower());
+                            Console.WriteLine("Found word: {0}", word.ToLower());
                         }
+#if DEBUG_LOGGING
                         else
                         {
                             Console.Write(" (no match)");
                         }
 
                         Console.WriteLine();
+#endif
                     }
                 }
                 else
@@ -92,13 +98,18 @@ namespace SlagalicaSolver
 
         private void SortWordlistByLength()
         {
+
+#if DEBUG_LOGGING
             Console.WriteLine();
-
             Console.Write("Sorting word list... ");
-            Array.Sort(this.wordlist, (x, y) => x.Length.CompareTo(y.Length) * -1);
-            Console.Write("Done.\n");
+#endif
 
+            Array.Sort(this.wordlist, (x, y) => x.Length.CompareTo(y.Length) * -1);
+
+#if DEBUG_LOGGING
+            Console.Write("Done.\n");
             Console.WriteLine("First word is {0}.", wordlist[0]);
+#endif
         }
     }
 }
